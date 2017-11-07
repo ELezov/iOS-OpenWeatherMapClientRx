@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1773AD7B290BC1ABD582669E /* Pods_iOS_OpenWeatherMapClientRxTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88ED55A8C2E510E6DD53A0ED /* Pods_iOS_OpenWeatherMapClientRxTests.framework */; };
+		953E241B1FB1AE40003F1006 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E241A1FB1AE40003F1006 /* Endpoint.swift */; };
+		953E241E1FB1B207003F1006 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E241D1FB1B207003F1006 /* WeatherService.swift */; };
+		953E24201FB1B255003F1006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E241F1FB1B255003F1006 /* Constants.swift */; };
+		953E24221FB1D0D4003F1006 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24211FB1D0D4003F1006 /* Network.swift */; };
+		953E24241FB1D2DD003F1006 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24231FB1D2DD003F1006 /* NetworkManager.swift */; };
+		953E242B1FB1F5D1003F1006 /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24251FB1F5D1003F1006 /* Clouds.swift */; };
+		953E242C1FB1F5D1003F1006 /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24261FB1F5D1003F1006 /* Coord.swift */; };
+		953E242D1FB1F5D1003F1006 /* WeatherResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24271FB1F5D1003F1006 /* WeatherResult.swift */; };
+		953E242E1FB1F5D1003F1006 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24281FB1F5D1003F1006 /* Main.swift */; };
+		953E242F1FB1F5D1003F1006 /* Sys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E24291FB1F5D1003F1006 /* Sys.swift */; };
+		953E24301FB1F5D1003F1006 /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953E242A1FB1F5D1003F1006 /* Wind.swift */; };
 		95968B051FB057FD00C7899F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95968B041FB057FD00C7899F /* AppDelegate.swift */; };
 		95968B071FB057FD00C7899F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95968B061FB057FD00C7899F /* ViewController.swift */; };
 		95968B0A1FB057FD00C7899F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95968B081FB057FD00C7899F /* Main.storyboard */; };
@@ -37,6 +48,17 @@
 		2A2DBA77EBADB257466CD27F /* Pods-iOS-OpenWeatherMapClientRxTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-OpenWeatherMapClientRxTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-OpenWeatherMapClientRxTests/Pods-iOS-OpenWeatherMapClientRxTests.release.xcconfig"; sourceTree = "<group>"; };
 		88ED55A8C2E510E6DD53A0ED /* Pods_iOS_OpenWeatherMapClientRxTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_OpenWeatherMapClientRxTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6ABA528CE783696C18DB32 /* Pods-iOS-OpenWeatherMapClientRx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-OpenWeatherMapClientRx.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-OpenWeatherMapClientRx/Pods-iOS-OpenWeatherMapClientRx.release.xcconfig"; sourceTree = "<group>"; };
+		953E241A1FB1AE40003F1006 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		953E241D1FB1B207003F1006 /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		953E241F1FB1B255003F1006 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		953E24211FB1D0D4003F1006 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		953E24231FB1D2DD003F1006 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		953E24251FB1F5D1003F1006 /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
+		953E24261FB1F5D1003F1006 /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
+		953E24271FB1F5D1003F1006 /* WeatherResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherResult.swift; sourceTree = "<group>"; };
+		953E24281FB1F5D1003F1006 /* Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		953E24291FB1F5D1003F1006 /* Sys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sys.swift; sourceTree = "<group>"; };
+		953E242A1FB1F5D1003F1006 /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		95968B011FB057FD00C7899F /* iOS-OpenWeatherMapClientRx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-OpenWeatherMapClientRx.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95968B041FB057FD00C7899F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95968B061FB057FD00C7899F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +116,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		953E241C1FB1B17D003F1006 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				953E241A1FB1AE40003F1006 /* Endpoint.swift */,
+				953E241D1FB1B207003F1006 /* WeatherService.swift */,
+				953E24211FB1D0D4003F1006 /* Network.swift */,
+				953E24231FB1D2DD003F1006 /* NetworkManager.swift */,
+			);
+			name = network;
+			sourceTree = "<group>";
+		};
 		95968AF81FB057FD00C7899F = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +150,7 @@
 		95968B031FB057FD00C7899F /* iOS-OpenWeatherMapClientRx */ = {
 			isa = PBXGroup;
 			children = (
+				953E241C1FB1B17D003F1006 /* network */,
 				95968B2D1FB0627600C7899F /* git */,
 				95968B271FB05A1200C7899F /* model */,
 				95968B041FB057FD00C7899F /* AppDelegate.swift */,
@@ -127,6 +161,7 @@
 				95968B131FB057FD00C7899F /* Info.plist */,
 				95968B0B1FB057FD00C7899F /* iOS_OpenWeatherMapClientRx.xcdatamodeld */,
 				95968B2A1FB05D3200C7899F /* WeatherViewModel.swift */,
+				953E241F1FB1B255003F1006 /* Constants.swift */,
 			);
 			path = "iOS-OpenWeatherMapClientRx";
 			sourceTree = "<group>";
@@ -143,6 +178,12 @@
 		95968B271FB05A1200C7899F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				953E24251FB1F5D1003F1006 /* Clouds.swift */,
+				953E24261FB1F5D1003F1006 /* Coord.swift */,
+				953E24271FB1F5D1003F1006 /* WeatherResult.swift */,
+				953E24281FB1F5D1003F1006 /* Main.swift */,
+				953E24291FB1F5D1003F1006 /* Sys.swift */,
+				953E242A1FB1F5D1003F1006 /* Wind.swift */,
 				95968B281FB05A5A00C7899F /* Weather.swift */,
 			);
 			name = model;
@@ -363,9 +404,20 @@
 			files = (
 				95968B2B1FB05D3200C7899F /* WeatherViewModel.swift in Sources */,
 				95968B291FB05A5A00C7899F /* Weather.swift in Sources */,
+				953E24241FB1D2DD003F1006 /* NetworkManager.swift in Sources */,
+				953E242B1FB1F5D1003F1006 /* Clouds.swift in Sources */,
 				95968B071FB057FD00C7899F /* ViewController.swift in Sources */,
+				953E242F1FB1F5D1003F1006 /* Sys.swift in Sources */,
 				95968B051FB057FD00C7899F /* AppDelegate.swift in Sources */,
+				953E24301FB1F5D1003F1006 /* Wind.swift in Sources */,
+				953E241B1FB1AE40003F1006 /* Endpoint.swift in Sources */,
+				953E242D1FB1F5D1003F1006 /* WeatherResult.swift in Sources */,
+				953E24221FB1D0D4003F1006 /* Network.swift in Sources */,
 				95968B0D1FB057FD00C7899F /* iOS_OpenWeatherMapClientRx.xcdatamodeld in Sources */,
+				953E242C1FB1F5D1003F1006 /* Coord.swift in Sources */,
+				953E241E1FB1B207003F1006 /* WeatherService.swift in Sources */,
+				953E242E1FB1F5D1003F1006 /* Main.swift in Sources */,
+				953E24201FB1B255003F1006 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

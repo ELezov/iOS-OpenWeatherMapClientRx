@@ -20,4 +20,4 @@ DerivedData
 !default.xcworkspace
 
 #CocoaPods
-Pods
+.Pods/

@@ -7,12 +7,35 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
-
+    
+    var weatherViewModel : WeatherViewModel?
+    let disposeBag = DisposeBag()
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var degreesLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let networkManager = NetworkManager()
+        self.weatherViewModel = WeatherViewModel(networkManager: networkManager)
         // Do any additional setup after loading the view, typically from a nib.
+        weatherViewModel?.cityName.bind(to: cityNameLabel.rx.text)
+        .addDisposableTo(disposeBag)
+        
+        weatherViewModel?.degrees.bind(to: degreesLabel.rx.text)
+        .addDisposableTo(disposeBag)
+        
+        self.nameTextField.rx.text.subscribe (onNext: { text in
+            self.weatherViewModel?.searchText.onNext(text!)
+        })
+        //NetworkManager().getInfoWeather(query: "Kaliningrad")
+        
     }
 
     override func didReceiveMemoryWarning() {
