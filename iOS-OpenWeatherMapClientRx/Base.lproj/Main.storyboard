@@ -23,21 +23,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="woQ-pM-3LX">
-                                <rect key="frame" x="72" y="40" width="231" height="30"/>
+                                <rect key="frame" x="72" y="30" width="231" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4e-g9-JoP">
-                                <rect key="frame" x="96" y="116" width="184" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4e-g9-JoP">
+                                <rect key="frame" x="96" y="95" width="184" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1z-cw-Zo0">
-                                <rect key="frame" x="96" y="168" width="184" height="124"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M1z-cw-Zo0">
+                                <rect key="frame" x="96" y="246" width="184" height="124"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JI-L3-HCm">
+                                <rect key="frame" x="97" y="159" width="183" height="62"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvO-lg-Pwu">
+                                <rect key="frame" x="145" y="378" width="85" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,15 +55,29 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="woQ-pM-3LX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Ihd-93-QVc"/>
+                            <constraint firstItem="7JI-L3-HCm" firstAttribute="top" secondItem="R4e-g9-JoP" secondAttribute="bottom" constant="39" id="ESQ-AM-3n3"/>
+                            <constraint firstItem="R4e-g9-JoP" firstAttribute="top" secondItem="woQ-pM-3LX" secondAttribute="bottom" constant="35" id="IQc-WQ-gTK"/>
+                            <constraint firstItem="M1z-cw-Zo0" firstAttribute="top" secondItem="7JI-L3-HCm" secondAttribute="bottom" constant="25" id="K2H-Id-kqD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R4e-g9-JoP" secondAttribute="trailing" constant="79" id="KhC-kx-5GH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="woQ-pM-3LX" secondAttribute="trailing" constant="56" id="TKM-Rg-cT3"/>
+                            <constraint firstItem="RvO-lg-Pwu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="129" id="VQ7-1l-11T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RvO-lg-Pwu" secondAttribute="trailing" constant="129" id="Xjh-de-Xgb"/>
+                            <constraint firstItem="M1z-cw-Zo0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="Y2O-GK-Cfd"/>
+                            <constraint firstItem="7JI-L3-HCm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="awB-gW-Lvz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7JI-L3-HCm" secondAttribute="trailing" constant="79" id="eqK-4m-n0L"/>
+                            <constraint firstItem="woQ-pM-3LX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="hS9-Vf-tBg"/>
+                            <constraint firstItem="RvO-lg-Pwu" firstAttribute="top" secondItem="M1z-cw-Zo0" secondAttribute="bottom" constant="25" id="luC-wp-pKD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="M1z-cw-Zo0" secondAttribute="trailing" constant="79" id="pA2-z8-7ua"/>
+                            <constraint firstItem="R4e-g9-JoP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="q5M-xq-oB7"/>
                             <constraint firstItem="woQ-pM-3LX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="wE6-pG-DZy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cityNameLabel" destination="R4e-g9-JoP" id="ccf-Mf-1HC"/>
                         <outlet property="degreesLabel" destination="M1z-cw-Zo0" id="bGk-1p-PIH"/>
+                        <outlet property="descriptionLabel" destination="7JI-L3-HCm" id="faw-y2-9hO"/>
                         <outlet property="nameTextField" destination="woQ-pM-3LX" id="CHF-xA-upv"/>
+                        <outlet property="windLabel" destination="RvO-lg-Pwu" id="pgT-76-Db0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

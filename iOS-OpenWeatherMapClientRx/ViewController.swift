@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var cityNameLabel: UILabel!
     @IBOutlet weak var degreesLabel: UILabel!
+    @IBOutlet weak var windLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,12 @@ class ViewController: UIViewController {
         .addDisposableTo(disposeBag)
         
         weatherViewModel?.degrees.bind(to: degreesLabel.rx.text)
+        .addDisposableTo(disposeBag)
+        
+        weatherViewModel?.wind.bind(to: windLabel.rx.text)
+        .addDisposableTo(disposeBag)
+        
+        weatherViewModel?.descriptionLabel.bind(to: descriptionLabel.rx.text)
         .addDisposableTo(disposeBag)
         
         self.nameTextField.rx.text.subscribe (onNext: { text in

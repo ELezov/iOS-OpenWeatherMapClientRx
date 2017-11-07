@@ -20,7 +20,8 @@ extension WeatherService: Endpoint {
             case .getWeatherInfo(let query):
                 return ["q" : query,
                         "APPID" : APP_ID,
-                        "units" : "metric"]
+                        "units" : "metric",
+                        "lang" : "ru"]
         }
     }
 

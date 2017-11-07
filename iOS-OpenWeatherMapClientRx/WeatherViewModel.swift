@@ -9,9 +9,12 @@ class  WeatherViewModel {
     
     let disposeBag = DisposeBag()
     
-    var searchText = BehaviorSubject<String>(value: "")
-    var cityName = BehaviorSubject<String>(value: "Unknown")
+    var searchText = BehaviorSubject<String>(value: "Калининград")
+    var cityName = BehaviorSubject<String>(value: "")
     var degrees = BehaviorSubject<String>(value: "")
+    var wind = BehaviorSubject<String>(value: "")
+    var descriptionLabel = BehaviorSubject<String>(value: "")
+    
     
     var weather: WeatherResult? {
         didSet {
@@ -24,6 +27,16 @@ class  WeatherViewModel {
             if let temp = weather?.main?.temp {
                 DispatchQueue.main.async {
                     self.degrees.onNext("\(temp) °C")
+                }
+            }
+            if let wind = weather?.wind?.speed{
+                DispatchQueue.main.async {
+                    self.wind.onNext("\(wind) m/s")
+                }
+            }
+            if let description = weather?.weather?[0].description{
+                DispatchQueue.main.async {
+                    self.descriptionLabel.onNext(description)
                 }
             }
         }

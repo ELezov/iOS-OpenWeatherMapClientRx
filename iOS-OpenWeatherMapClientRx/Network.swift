@@ -26,8 +26,7 @@ extension Network {
     func request(endpoint: Endpoint, comletion: @escaping ResponseClosure) -> Request {
         let request = manager.request(endpoint.fullURL, method: endpoint.method, parameters: endpoint.parameters, encoding: endpoint.encoding, headers: endpoint.headers).responseJSON { response in
             if response.result.isSuccess {
-                print(response.result.value)
-                //debugPrint(response.result.description)
+                debugPrint(response.result.description)
             } else {
                 debugPrint(response.result.error ?? "Error")
                 if let urlRequest = response.request,
@@ -40,22 +39,5 @@ extension Network {
         print(request.description)
         return request
     }
-    
-//    func requestRx(endpoint: Endpoint/*, comletion: @escaping ResponseClosure*/) -> Request {
-//        let request = manager.request(endpoint.fullURL, method: endpoint.method, parameters: endpoint.parameters, encoding: endpoint.encoding, headers: endpoint.headers).rx.json() { response in
-//            if response.result.isSuccess {
-//                debugPrint(response.result.description)
-//            } else {
-//                debugPrint(response.result.error ?? "Error")
-//                if let urlRequest = response.request,
-//                    let error = response.result.error {
-//                    self.delegate?.networkRequest(request: urlRequest, error: error)
-//                }
-//            }
-//            //comletion(response)
-//        }
-//        print(request.description)
-//        return request
-//    }
 
 }
