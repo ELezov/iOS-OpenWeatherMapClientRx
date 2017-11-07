@@ -1,11 +1,3 @@
-//
-//  WeatherViewModel.swift
-//  iOS-OpenWeatherMapClientRx
-//
-//  Created by Nikolay on 06.11.17.
-//  Copyright © 2017 Eugene Lezov. All rights reserved.
-//
-
 import RxSwift
 import ObjectMapper
 import Alamofire
@@ -13,11 +5,6 @@ import RxCocoa
 import RxAlamofire
 
 class  WeatherViewModel {
-    private struct Constants {
-        static let URLPrefix = "http://api.openweathermap.org/data/2.5/weather?q="
-        static let URLPostfix = "4264c8b0b687a575351fefb6562585e0"
-    }
-    
     let networkManager: NetworkManager?
     
     let disposeBag = DisposeBag()
@@ -26,7 +13,7 @@ class  WeatherViewModel {
     var cityName = BehaviorSubject<String>(value: "Unknown")
     var degrees = BehaviorSubject<String>(value: "")
     
-    var weather: Weather? {
+    var weather: WeatherResult? {
         didSet {
             if let name = weather?.name {
                 DispatchQueue.main.async {
@@ -34,9 +21,9 @@ class  WeatherViewModel {
                 }
                 print(name)
             }
-            if let temp = weather?.degrees {
+            if let temp = weather?.main?.temp {
                 DispatchQueue.main.async {
-                    self.degrees.onNext("\(temp) °F")
+                    self.degrees.onNext("\(temp) °C")
                 }
             }
         }
@@ -47,7 +34,7 @@ class  WeatherViewModel {
         let jsonRequest = searchText.map { text in
             return Network.shared.request(endpoint: WeatherService.getWeatherInfo(query: text)){ response in
                 response.result.ifSuccess {
-                    self.weather = Mapper<Weather>().map(JSONObject: response.result.value)
+                    self.weather = Mapper<WeatherResult>().map(JSONObject: response.result.value)
                 }
             }
         }.subscribe()

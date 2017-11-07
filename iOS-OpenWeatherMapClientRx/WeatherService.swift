@@ -18,7 +18,9 @@ extension WeatherService: Endpoint {
     var parameters: Parameters {
         switch self {
             case .getWeatherInfo(let query):
-                return ["q" : query, "APPID" : APP_ID]
+                return ["q" : query,
+                        "APPID" : APP_ID,
+                        "units" : "metric"]
         }
     }
 
