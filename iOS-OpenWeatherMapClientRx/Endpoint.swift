@@ -21,7 +21,7 @@ protocol Endpoint {
 
 extension Endpoint {
     var encoding: ParameterEncoding {
-        return method == .get ? URLEncoding.default : JSONEncoding.default
+        return URLEncoding.queryString//method == .get ? URLEncoding.queryString// : JSONEncoding.default
     }
     
     var fullURL: String {

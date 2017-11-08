@@ -9,11 +9,14 @@ class  WeatherViewModel {
     
     let disposeBag = DisposeBag()
     
-    var searchText = BehaviorSubject<String>(value: "Калининград")
+    var searchText = BehaviorSubject<String>(value: "Kaliningrad")
+    var iconURL = BehaviorSubject<String>(value: "")
     var cityName = BehaviorSubject<String>(value: "")
     var degrees = BehaviorSubject<String>(value: "")
     var wind = BehaviorSubject<String>(value: "")
     var descriptionLabel = BehaviorSubject<String>(value: "")
+    
+    //let iconArray =
     
     
     var weather: WeatherResult? {
@@ -37,6 +40,12 @@ class  WeatherViewModel {
             if let description = weather?.weather?[0].description{
                 DispatchQueue.main.async {
                     self.descriptionLabel.onNext(description)
+                }
+            }
+            if let icon = weather?.weather?[0].icon {
+                let url = BASE_IMG_URL + icon + ".png"
+                DispatchQueue.main.async {
+                    self.iconURL.onNext(url)
                 }
             }
         }

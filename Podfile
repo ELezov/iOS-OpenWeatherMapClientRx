@@ -9,6 +9,7 @@ target 'iOS-OpenWeatherMapClientRx' do
   pod 'ObjectMapper', '2.2.9'
   pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
+  pod 'Kingfisher', '3.13'
 
   # Pods for iOS-OpenWeatherMapClientRx
 

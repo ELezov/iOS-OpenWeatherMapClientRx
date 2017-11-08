@@ -10,6 +10,7 @@ import Foundation
 
 let BASE_URL = "https://api.openweathermap.org/data/2.5"
 let PATH_WEATHER_URL = "/weather"
+let BASE_IMG_URL = "https://openweathermap.org/img/w/"
 
 
 let APP_ID = "4264c8b0b687a575351fefb6562585e0"

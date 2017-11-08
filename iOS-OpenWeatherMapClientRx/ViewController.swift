@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class ViewController: UIViewController {
     
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var degreesLabel: UILabel!
     @IBOutlet weak var windLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var iconWeather: UIImageView!
+    
+    //var url: Variable<URL> = Variable(URL(string: ""))
     
     
     override func viewDidLoad() {
@@ -39,6 +43,10 @@ class ViewController: UIViewController {
         
         weatherViewModel?.descriptionLabel.bind(to: descriptionLabel.rx.text)
         .addDisposableTo(disposeBag)
+        
+        weatherViewModel?.iconURL.asObserver().subscribe(onNext: { value in
+            self.iconWeather.kf.setImage(with: URL(string: value))
+        }).addDisposableTo(disposeBag)
         
         self.nameTextField.rx.text.subscribe (onNext: { text in
             self.weatherViewModel?.searchText.onNext(text!)
